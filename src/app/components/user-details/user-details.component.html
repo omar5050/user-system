@@ -1,0 +1,85 @@
+<div>
+  <img
+    src="../../../assets/img/2340254fb07483122ff40273dfb2a410.jpg"
+    alt=""
+    class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover"
+  />
+</div>
+
+<div class="container p-5 mt-5 position-relative">
+  <form [formGroup]="detailsUser" (ngSubmit)="updateUser(detailsUser)">
+    <div
+      class="head-img w-50 m-auto text-center mb-5 overflow-hidden d-flex flex-column align-items-center p-4"
+    >
+      <img [src]="user.picture" alt="" class="w-25" />
+      <div>
+        <label for="img" class="custom-upload-img">Upload Photo</label>
+        <input
+          type="file"
+          name="img"
+          id="img"
+          formControlName="picture"
+          hidden
+        />
+      </div>
+    </div>
+    <h1 class="text-danger text-center fs-6">Update firstName & LastName</h1>
+    <div class="row gy-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          formControlName="firstName"
+          class="form-control"
+          placeholder="First Name"
+          [value]="user.firstName"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          formControlName="lastName"
+          class="form-control"
+          placeholder="Last Name"
+          [value]="user.lastName"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          placeholder="Email"
+          [value]="user.email"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          formControlName="picture"
+          class="form-control"
+          placeholder="Phone"
+        />
+      </div>
+    </div>
+
+    <div class="button-style d-flex justify-content-between mt-5">
+      <a routerLink="/" class="btn btn-custom custom-width py-2 rounded-5"
+        >cancel</a
+      >
+      <button
+        class="btn btn-info custom-width py-2 rounded-5 text-white"
+        [disabled]="!detailsUser.valid"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+</div>

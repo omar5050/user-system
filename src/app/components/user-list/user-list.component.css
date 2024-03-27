@@ -1,0 +1,61 @@
+.user-list {
+  padding: 30px;
+  margin-top: 5rem;
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+input {
+  margin: 30px auto;
+  display: block;
+}
+
+.custom-add {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  background-color: var(--color-main);
+  color: var(--color-headLine);
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.custom-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.color-edit {
+  color: var(--color-main);
+}
+
+.color-delete {
+  color: var(--color-delete);
+}
+
+i {
+  cursor: pointer;
+  color: var(--color-headLine);
+  background-color: white;
+  padding: 0.5rem;
+}
+
+p {
+  color: var(--color-headLine);
+}

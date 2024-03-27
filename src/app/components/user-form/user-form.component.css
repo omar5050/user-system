@@ -1,0 +1,46 @@
+.container {
+  background-color: var(--color-headLine);
+  border-radius: 25px;
+  box-shadow: var(--box-shadow);
+}
+
+.btn-custom {
+  background-color: var(--color-text);
+}
+
+.custom-width {
+  width: 15%;
+}
+
+.custom-upload-img {
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+input {
+  background-color: var(--color-text);
+  border-radius: 25px;
+}
+::placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .head-img img {
+    width: 100% !important;
+  }
+
+  .button-style {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .button-style button {
+    margin-top: 5px;
+    width: 100% !important;
+  }
+}

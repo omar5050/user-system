@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* body {
+  background: url("./assets/img/2340254fb07483122ff40273dfb2a410.jpg");
+  background-position: center;
+  background-size: cover;
+} */
+
+:root {
+  --color-headLine: #ffffff;
+  --color-text: #d9d9d9;
+  --color-main: #1bb0f0;
+  --color-delete: #ec1b1b;
+  --box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

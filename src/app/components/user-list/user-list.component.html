@@ -1,0 +1,69 @@
+<div>
+  <img
+    src="../../../assets/img/2340254fb07483122ff40273dfb2a410.jpg"
+    alt=""
+    class="position-absolute w-100 top-0 start-0 object-fit-contain"
+  />
+</div>
+
+<div class="container position-relative">
+  <div class="user-list">
+    <input
+      type="search"
+      placeholder="Search by name"
+      class="form-control rounded-3 w-75"
+      (keyup)="searchByName(filter.value)"
+      #filter
+    />
+
+    <button class="d-block ms-auto custom-add btn">
+      <a routerLink="/user-form" class="custom-add">
+        <i class="bi bi-plus p-0 bg-transparent"></i> Add New Contact</a
+      >
+    </button>
+
+    <ul>
+      <li
+        class="d-flex justify-content-between align-items-center mt-3"
+        *ngFor="let user of filterData.length > 0 ? filterData : all"
+      >
+        <div class="info d-flex align-items-center">
+          <img
+            [src]="user.picture ? user.picture : defutlImg"
+            alt=""
+            class="custom-img"
+          />
+          <div class="ms-5">
+            <p>{{ user.firstName }}</p>
+            <p>{{ user.phone ? user.phone : defultNum }}</p>
+          </div>
+        </div>
+
+        <div class="operate-btn">
+          <a [routerLink]="['/user-details', user.id]" class="me-2"
+            ><i class="bi bi-pencil-square color-edit"></i
+          ></a>
+          <i
+            class="bi bi-trash-fill color-delete"
+            (click)="deleteUser(user.id)"
+          ></i>
+        </div>
+      </li>
+      <hr />
+      <div class="pagination d-flex justify-content-end">
+        <i
+          class="bi bi-arrow-left-circle me-2 bg-transparent p-0"
+          (click)="countDecresse()"
+          (click)="getUser()"
+        ></i>
+        <p>{{ countPage + 1 }}/10</p>
+
+        <i
+          class="bi bi-arrow-right-circle ms-2 bg-transparent p-0"
+          (click)="countIncreese()"
+          (click)="getUser()"
+        ></i>
+      </div>
+    </ul>
+  </div>
+</div>
