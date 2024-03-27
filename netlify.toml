@@ -1,7 +1,6 @@
-[build]
-  command = "ng build"
+command = "ng build"
   publish = "dist/user-system/browser"
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 200
